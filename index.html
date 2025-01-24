@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Market Place</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="bootstrap.css" />
     <link rel="stylesheet" href="authentication.css" />
   </head>
@@ -30,10 +31,10 @@
                     >Username</label
                   >
                   <input
-                    type="email"
+                    type="text"
                     placeholder="@username"
                     class="form-control"
-                    id="exampleInputEmail1"
+                    id="signup_name"
                   />
                 </div>
                 <div>
@@ -44,7 +45,7 @@
                     type="email"
                     placeholder="Example@email.com"
                     class="form-control"
-                    id="exampleInputEmail1"
+                    id="signup-email"
                   />
                 </div>
                 <div>
@@ -55,16 +56,23 @@
                     type="password"
                     placeholder="At least 8 characters"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="signup-password"
                   />
                 </div>
-                <div class="d-flex justify-content-end mt-3 forgot">
+                <!-- <div class="d-flex justify-content-end mt-3 forgot">
                   Forgot password?
-                </div>
+                </div> -->
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-primary signin-btn">
-                    Sign in
-                  </button>
+                  <button style="gap: 20px;" id="signup-btn" type="button"
+                    class="btn btn-primary signin-btn w-100 fw-bold d-flex justify-content-center align-items-center">
+
+
+                    <span>
+                      Sign up
+                    </span>
+                    <div id="loading_btn_spinner" style="width: 25px; height: 25px; display: none;"
+                      class="spinner-border text-light" role="status">
+                      <span class="visually-hidden">Loading...</span>
                 </div>
               </div>
               <div class="my-3 mx-auto">
@@ -112,5 +120,9 @@
     <script src="./bootstrapscript.js"></script>
     <script src="./pooper.js"></script>
     <script src="./bundle.js"></script>
+    
+    <script type="module" src="./config.js"></script>
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./auth.js"></script>
   </body>
 </html>
