@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Market Place</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="bootstrap.css" />
     <link rel="stylesheet" href="authentication.css" />
   </head>
@@ -33,7 +34,7 @@
                     type="email"
                     placeholder="Example@email.com"
                     class="form-control"
-                    id="exampleInputEmail1"
+                    id="signin-email"
                   />
                 </div>
                 <div>
@@ -44,14 +45,14 @@
                     type="password"
                     placeholder="At least 8 characters"
                     class="form-control"
-                    id="exampleInputPassword1"
+                    id="signin-password"
                   />
                 </div>
                 <div class="d-flex justify-content-end mt-3 forgot">
                   Forgot password?
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-primary signin-btn">
+                  <button type="button" class="btn btn-primary signin-btn" id="signin-btn">
                     Sign in
                   </button>
                 </div>
@@ -82,9 +83,12 @@
         </div>
       </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./bootstrapscript.js"></script>
     <script src="./pooper.js"></script>
     <script src="./bundle.js"></script>
+    <script type="module" src="./config.js"></script>
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./auth.js"></script>
   </body>
 </html>
